@@ -9,7 +9,7 @@
 <br>
 <h3>Shopping List</h3>
 <b>Required:</b>
-	<li><a href="https://buy.stripe.com/7sIeXU0Qt1ps2Z24gj"><b>BwE PS4 Syscon Writer ($180AUD) (Pre-Order Now @ Discount Price! Shipments Late December/Early 2023)</b></a>
+	<li><a href="https://betterwayelectronics.com.au/bweps4sysconwriter"><b>BwE PS4 Syscon Writer ($240AUD) (Pre-Order Now @ Discount Price! Shipments Late December/Early 2023)</b></a>
 	<li><a href="https://www.aliexpress.com/item/32841564699.html">4N35 Optocoupler ($1.35AUD)</a>
 	<li><a href="https://www.aliexpress.com/item/32214404363.html">Colourful Mini Breadboard ($1AUD)</a>
 	<li><a href="https://www.aliexpress.com/item/4000203371860.html">Male->Female Dupont Cables ($2AUD)</a>
