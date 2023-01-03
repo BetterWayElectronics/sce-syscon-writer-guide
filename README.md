@@ -49,15 +49,10 @@
   </div>
 </div>
 <br>
-<h3>Reading Syscon (Currently ONLY works on A0#-COL/2 chips):</h3>
 
+<h3>Wiring To Syscon</h3>
 
-  <li>Connect from your Arduino to the Syscon Chip (On or Off Board)
-  <li>Launch SysconReader.exe in Terminal with your COM port (Eg: SysconReader.exe COM4)
-  </li>
-  <br>If the dumps do not match change resistors (100ohm, 510ohm 1kohm).
-  <br><br>
-  <b>Wire up your Flasher:</b><br><br>
+  <b>Pinout</b><br><br>
   <li>D6 -> 47 ohm Resistor -> Pin 1 4N35
   <li>D5 -> Pin 6 Pro / Pin 13 FAT
   <li>D4 -> Pin 15 Pro / Pin 22 FAT
@@ -69,7 +64,6 @@
   <li>TXD -> Pin 5 4N35
   <li>5V -> 4.7k ohm Resistor -> Pin4 4N35
   <li>5V -> Pin 16 Pro / Pin 23 FAT
-
 <br>
 <img src="https://i.imgur.com/y7WMewt.png" width="50%" height="50%">
 <br><b>Schematic</b>
@@ -77,8 +71,6 @@
 <img src="https://i.imgur.com/b4nFFP4.jpeg"  width="50%" height="50%">
 <br><b>Fully Assembled</b>
 <br>
-
-<h3>Wiring To Syscon</h3>
 
 <img src="https://i.imgur.com/E6sxlx4.jpeg" width="50%" height="50%">
 <br><br>
@@ -111,6 +103,17 @@
     <br><b>The wire must be parallel to the component termination.</b>
   </div>
 </div>
+
+<h3>Reading Syscon (Currently ONLY works on A0#-COL/2 chips):</h3>
+<img src="https://i.imgur.com/zV8EvTU.png" width="55%" height="55%">
+
+  <li>Connect from your Arduino to the Syscon Chip (See Wiring To Syscon Below)
+  <li>Launch BwE_PS4_Syscon_Reader.exe in Terminal with your COM port (Eg: BwE_PS4_Syscon_Reader.exe COM4)
+  <li>It will glitch the chip (if this is your first read and you have not enabled OCD mode) and then dump!
+  <li>It will then re-dump and compare in order to validate them.
+  </li>
+  <br>If the dumps do not match change resistors (100ohm, 510ohm, 1kohm).
+  <br>If it does not even dump check your connections (seriously) or change your Octocoupler.
 
 
 <h3>Patching Syscon Dump:</h3>
