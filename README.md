@@ -339,12 +339,13 @@
 
 <h3>Final Step - LoadBios Repair / Downgrade:</h3>
 
-With the Syscon patched and the NOR patched, upload them both at the same time to the console. If you have the Syscon on board you need to have standby power active.<br>
-The console will either boot to Safe Mode and ask you to install a lower firmware OR it won't and you will have an error in your UART log<br>
-If it fails to boot go and re-patch your NOR with a different CoreOS header then using the <b>same</b> syscon patch file - upload both again and reboot.<br>
+With the Syscon patched and the NOR patched, upload them both at the same time to the console. If you are writing the syscon on board you need to have standby power active.<br>
+The console will either boot to Safe Mode and ask you to install a lower firmware OR it won't and you will have an error in your UART log<br><br>
+If it fails to boot go and re-patch your NOR with a different CoreOS header and using the <b>same</b> syscon patch file upload both again and reboot.<br>
 If you have the UART errors BlStorageHeader or checkUpdVersion, you did not follow my instructions and have corrupted your Syscon - I will have to manually repair it for you for a fee.<br>
 If you still have loadBios -8 error and the bootloader version has changed then you have an issue with your RAM, replace/repair it.<br><br>
 And thats that! Easy right?
+
 
 <h3>Credits/Greetz:</h3>
 DARKNESMONK
