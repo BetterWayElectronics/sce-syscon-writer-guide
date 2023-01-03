@@ -82,7 +82,7 @@
 
 <img src="https://i.imgur.com/E6sxlx4.jpeg" width="50%" height="50%">
 <br><br>
-<li>If you are dumping on board, <b>lift pin 15 and 16</b>. To do this add flux and low melt solder to the pins and let it soak in.
+<li>If you are dumping on board, <b>lift pin 15 and 16 (Pro) or pin 22 and 23 (Fat)</b>. To do this add flux and low melt solder to the pins and let it soak in.
 <li>Use tweezers and a thin tip and while applying heat to the pin push from behind with the tweezers until the pin is lifted.
 <li>Wire pin 5 and 6 flat against the resistors, directly to the pins or the alternative solder points. Following best practice.
 <br><br>
