@@ -76,7 +76,18 @@
 <li>Use tweezers and a thin tip and while applying heat to the pin push from behind with the tweezers until the pin is lifted.
 <li>Wire pin 5 and 6 flat against the resistors, directly to the pins or the alternative solder points. Following best practice.
 <br><br>
-<li>When reading Syscon on board (after patching) wire <i>only</I> pin 5, 6 and ground either directly to the chip or alternative points.
+<li>To remove the Syscon chip entirely, apply flux to all of the pins and flood them with low melt solder (chipquik if not using hot air).
+<li>Apply 480c at 40% pressure from a height of approximately 15cm until the solder is visibly liquidous on all sides.
+<li>Pull up the chip with an SMD vacuum pen.
+<li>Tin the pads on the PS4 with low melt solder.
+<li>Clean pins 1-16 on the Syscon of any solder bridges and solder to pre-tinned breakout board (or place into DIP socket).
+<br><br>
+<li>When reattaching the Syscon first apply a light layer of flux on the already tinned pads.
+<li>Line up Syscon appropriately or solder each corner manually to ensure the chip does not move during reflow.
+<li>Apply 480c at 40% pressure from a height of approximately 20cm and slowly drop until you see flux bubble/move and solder shine/glimmer.
+<li>If you do not want to use hot air, use drag soldering technique or manually solder each pin individually with thin tip tinned with low melt solder.
+<br><br>
+<li>When reading Syscon on board (<b>after patching</b>) wire only pin 5, 6 and ground either directly to the chip or alternative points.
 </li>
 <div style="display: flex;">
 
