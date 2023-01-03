@@ -51,8 +51,6 @@
 <br>
 
 <h3>Wiring To Syscon</h3>
-
-  <b>Pinout</b><br><br>
   <li>D6 -> 47 ohm Resistor -> Pin 1 4N35
   <li>D5 -> Pin 6 Pro / Pin 13 FAT
   <li>D4 -> Pin 15 Pro / Pin 22 FAT
