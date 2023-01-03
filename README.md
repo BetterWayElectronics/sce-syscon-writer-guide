@@ -351,14 +351,28 @@
 
 <h3>Final Step - LoadBios Repair / Downgrade:</h3>
 
-With the Syscon patched and the NOR patched, upload them both at the same time to the console. If you are writing the syscon on board you need to have standby power active.<br>
-The console will either boot to Safe Mode and ask you to install a lower firmware OR it won't and you will have an error in your UART log<br><br>
-If it fails to boot go and re-patch your NOR with a different CoreOS header and using the <b>same</b> syscon patch file upload both again and reboot.<br>
-If you have the UART errors BlStorageHeader or checkUpdVersion, you did not follow my instructions and have corrupted your Syscon - I will have to manually repair it for you for a fee.<br>
-If you still have loadBios -8 error and the bootloader version has changed then you have an issue with your RAM, replace/repair it.<br><br>
-And thats that! Easy right?
-
-
+There are two methods, both are basically the same so pick whichever suits you!
+<br><br>
+<li>Patch the NOR with SB & CoreOS patch of your choice
+<li>Boot console and read UART log
+<li>If UART log says "CheckUpdVersion" AND OR the Bootloader version has changed...
+<li>Write the Syscon patch to the console
+<li>If not, try another patch and repeat the process
+<li>On success the console will boot to safe mode and prompt to install lower firmware (recovery).
+<br>
+<br>The other method:
+<br><br>
+<li>Patch the NOR with SB & CoreOS patch of your choice
+<li>Write the Syscon patch to the console
+<li>If the console does not boot...
+<li>Repeat first two steps, pick a new Patch for NOR and keep the same patch for Syscon.
+<li>On success the console will boot to safe mode and prompt to install lower firmware (recovery).
+<br>
+<br>Troubleshooting:
+<br><br>
+<li>If you still have loadBios -8 and the Bootloader version has changed you have an issue with your RAM, replace and or repair it.
+<li>If you have BlStorageHeader error, you did not follow my instructions and have soft bricked your syscon, I will have to patch for you -- for $$$$ (or wait for update to my software).
+<br>
 <h3>Credits/Greetz:</h3>
 DARKNESMONK
   <br>PDJ
