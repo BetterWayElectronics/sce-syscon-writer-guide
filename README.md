@@ -36,6 +36,11 @@
   <li><a href="https://www.aliexpress.com/item/4000315816666.html">32-34AWG Cable 10m ($4.50AUD)</a></li>
 </li>
 
+<h3>Compatibilitiy</h3>
+<img src="https://i.imgur.com/4fpFJvI.jpg" width="50%" height="50%"><br>
+Do you have the Syscon on the right? You're outta luck. The glitch only works on Renesas RL78 chips. The guide ends here.<br>
+The chip MUST have A0#-COL or A0#-COL2 where the # is a number, obviously.
+
 <h3>Syscon Pinout</h3>
 
 <div style="display: flex;">
