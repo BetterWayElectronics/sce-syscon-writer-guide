@@ -1,7 +1,214 @@
 
 
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+				<title>BwE PS4 Syscon Guide (Paid SCE Flasher Version)</title>
+				
+<link rel="icon" type="image/png" href="http://nor.betterwayelectronics.com.au/triangle.png">
+
+<style class="cssdeck">
+
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: #333;
+  background-color: #ccc;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #333;
+  background-color: #ccc;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #333;
+  background-color: #ccc;
+}
+
+h4 {
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 20px 50px 150px;
+  font-size: 12px;
+  text-align: left;
+  	margin-left: auto;   
+	margin-right: auto
+}
+.box {
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+	padding: 21px;
+	background-color: #FFFFFF;
+	word-break: break-all;
+}
+
+img.middle {   display: block;   margin-left: auto;   margin-right: auto; padding: 1px 0;}
+
+.anchor{
+  display: block;
+  height: 80px; /*same height as header*/
+  margin-top: -80px; /*same height as header*/
+  visibility: hidden;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+a:link {color:#A4A4A4;}      /* unvisited link */
+a:visited {color:#A4A4A4;}  /* visited link */
+a:hover {color:#A4A4A4;}  /* mouse over link */
+a:active {color:#A4A4A4;}  /* selected link */ 
+
+  canvas#rain-canvas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Make the canvas appear behind the page content */
+  }
+  
+    li {
+    margin-left: 10px;
+	margin-bottom: 5px;
+
+  }
+  
+  table {
+    border-collapse: collapse;
+    max-width: 800px;
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #dddddd;
+  }
+</style>
+</head>
+
+<canvas id="rain-canvas"></canvas>
+
+<script>
+  // get the canvas element
+  var canvas = document.getElementById('rain-canvas');
+
+  // set the dimensions of the canvas
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // get the 2D context of the canvas
+  var ctx = canvas.getContext('2d');
+
+  // create an array to store the raindrops
+  var rainDrops = [];
+
+  // create the raindrop class
+  function RainDrop(x, y, size, speed) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+    this.speed = speed;
+  }
+
+  // add a new raindrop to the rainDrops array
+  function addRainDrop() {
+    // generate a random position for the raindrop
+    var x = Math.random() * canvas.width;
+    var y = 0;
+
+    // generate a random size for the raindrop
+    var size = Math.random() * 5 + 2;
+
+    // generate a random speed for the raindrop
+    var speed = Math.random() * 10 + 5;
+
+    // create a new raindrop object
+    var rainDrop = new RainDrop(x, y, size, speed);
+
+    // add the raindrop to the rainDrops array
+    rainDrops.push(rainDrop);
+  }
+
+  // animate the raindrops
+  function animate() {
+    // clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // loop through the rainDrops array
+    for (var i = 0; i < rainDrops.length; i++) {
+      // get the current raindrop
+      var rainDrop = rainDrops[i];
+
+      // draw the raindrop on the canvas
+      ctx.beginPath();
+      ctx.arc(rainDrop.x, rainDrop.y, rainDrop.size, 0, 2 * Math.PI);
+      ctx.fillStyle = '#0099cc';
+      ctx.fill();
+
+      // move the raindrop down
+      rainDrop.y += rainDrop.speed;
+
+      // if the raindrop reaches the bottom of the canvas, remove it from the rainDrops array
+      if (rainDrop.y > canvas.height) {
+        rainDrops.splice(i, 1);
+      }
+    }
+
+    // add a new raindrop every 100 milliseconds
+    setTimeout(addRainDrop, 100);
+
+    // animate the raindrops again
+    requestAnimationFrame(animate);
+  }
+
+  // start animating the raindrops
+  animate();
+</script>
+
+
+	<body><a name="Top"></a>
+	<a href="http://nor.betterwayelectronics.com.au/"><img src="http://nor.betterwayelectronics.com.au/images/logo.png" class="middle" onerror="this.onerror=null;this.src='https://i.imgur.com/EPBF6Mc.png';" /></a>
+	<table class="box">
+    <tr>
+    <td>
+	</div>
+
+</body>
+
 <h2>Syscon Guide - SCE Syscon Method</h2>
-<b>Last Updated 2/2/23 - VISIT WEBSITE FOR LATEST</b>
+<b>Last Updated 27/3/23</b>
 <br><br>
 <li><b>What is this?</b> This is a tool to read and write your PS4's Syscon on-board (and off-board) without the need to replace it with a blank (the now considered 'old way').
 <li><b>Why do I need this?</b> Modifying the Syscon allows for downgrading (via CoreOS swap), repairing of loadBios -8 type errors and enables service mode.
@@ -13,8 +220,8 @@
 </li>
 
 <h3>Shopping List</h3>
-<b>Required:</b>
-	<li><a href="https://betterwayelectronics.com.au/bweps4sysconwriter"><b>BwE PS4 Syscon Writer ($300AUD) (In Stock Now!)</b></a>
+<b>Required If Assembling Yourself:</b>
+	<li><a href="https://betterwayelectronics.com.au/bweps4sysconwriter"><b>BwE PS4 Syscon Writer ($300AUD)</b></a>
 		<li><a href="https://www.aliexpress.com/item/32273550144.html?mp=1">FT232RL TTL Serial Module (For UART) ($2AUD)</a>
 	<li><a href="https://www.aliexpress.com/item/32841564699.html">4N35 Optocoupler ($1.35AUD)</a>
 	<li><a href="https://www.aliexpress.com/item/32214404363.html">Colourful Mini Breadboard ($1AUD)</a>
@@ -23,7 +230,7 @@
 	<li><a href="https://www.aliexpress.com/item/32247209964.html">4.7-5k ohm Resistor ($1AUD)</a>
 	<li><a href="https://www.aliexpress.com/item/32660088529.html">1N4148/1N4448 Diode ($1AUD)</a>
 	<li><a href="https://betterwayelectronics.com.au/downloads/BwE_PS4_Syscon_Software.rar">BwE PS4 Syscon Software (Reader & Writer) (Updated 7/1/23)</a>
-	<li><a href="https://betterwayelectronics.com.au/downloads/BwE_PS4_NOR_Validator.rar">BwE PS4 NOR Validator v1.9.9 (Updated 7/1/23)</a>
+	<li><a href="https://betterwayelectronics.com.au/downloads/BwE_PS4_NOR_Validator.rar">BwE PS4 NOR Validator </a>
 </li>
 <br>
 <b>Optional:</b>
@@ -43,6 +250,32 @@
   <li><a href="https://www.aliexpress.com/item/4000315816666.html">32-34AWG Cable 10m ($4.50AUD)</a></li>
 </li>
 
+<h3>Purchase Links/Options</h3>
+								<div style="display: flex;">
+								  <div style="width: 320px; padding: 10px;">
+								  <a href="https://buy.stripe.com/dR68zw9mZb02436fZb">
+									<img src="https://i.imgur.com/AdzYMFP.jpeg" width="90%" height="70%">
+									</a>
+									<br><a href="https://buy.stripe.com/dR68zw9mZb02436fZb"><b>PCB Only (For Existing Customers)</b></a>
+									<br>$45AUD (28Euro, $30USD)
+								  </div>
+									<div style="width: 320px; padding: 10px;">
+									<a href="https://buy.stripe.com/cN2030dDfece8jm9AO">
+									<img src="https://i.imgur.com/0B0S571.jpeg" width="90%" height="70%">
+									</a>
+									<br><a href="https://buy.stripe.com/cN2030dDfece8jm9AO"><b>Syscon Writer Black Edition (Assembled On PCB)</b></a>
+									<br>$340AUD (210Euro, $225USD)
+								  </div>
+								   <div style="width: 320px; padding: 10px;">
+								   <a href="https://buy.stripe.com/dR66ro56J6JM436bIO">
+									<img src="https://i.imgur.com/KD0UbfD.jpeg" width="90%" height="70%">
+									</a>
+									<br><a href="https://buy.stripe.com/dR66ro56J6JM436bIO"><b>Syscon Writer Only</b></a>
+									<br>$300AUD (187Euro, $198USD)
+								  </div>
+								</div>
+
+
 <h3>Compatibilitiy</h3>
 <img src="https://i.imgur.com/4fpFJvI.jpg" width="50%" height="50%"><br>
 Do you have the Syscon on the right? You're outta luck. The glitch only works on Renesas RL78 chips. The guide ends here.<br>
@@ -52,50 +285,19 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 
 <div style="display: flex;">
   <div style="width: 420px; padding: 10px;">
-    <img src="https://i.imgur.com/UnGh1ne.png" width="50%" height="50%">
+    <img src="https://i.imgur.com/UnGh1ne.png" width="100%" height="100%">
     <br><b>FAT Syscon</b>
   </div>
   <div style="width: 420px; padding: 10px;">
-      <img src="https://i.imgur.com/mzsNJHP.png" width="50%" height="50%">
+      <img src="https://i.imgur.com/mzsNJHP.png" width="100%" height="100%">
     <br><b>Slim/Pro Syscon</b>
   </div>
 </div>
 <br>
 
-<h3>Wiring To Syscon</h3>
-
-  <b>Pinout</b><br><br>
-  <li>D6 -> 47 ohm Resistor -> Pin 1 4N35
-  <li>D5 -> Pin 6 Pro / Pin 13 FAT
-  <li>D4 -> Pin 15 Pro / Pin 22 FAT
-  <li>D3 -> Pin 5 Pro / Pin 12 FAT
-  <li>D2 -> Diode (-) -> D3
-  <li>D3 -> Pin 4 4N35
-  <li>GND -> Pin 2 4N35
-  <li>GND -> Pin 14 Pro / Pin 21 FAT
-  <li>TXD -> Pin 5 4N35
-  <li>5V -> 4.7k ohm Resistor -> Pin4 4N35
-  <li>5V -> Pin 16 Pro / Pin 23 FAT
-
-<div style="display: flex;">
-  <div style="width: 620px; padding: 10px;">
-    <img src="https://i.imgur.com/y7WMewt.png" width="70%" height="70%">
-    <br><b>Schematic 1</b>
-  </div>
-  <div style="width: 620px; padding: 10px;">
-    <img src="https://i.imgur.com/c3lVUa8.jpg" width="70%" height="70%">
-    <br><b>Schematic 2</b>
-
-  </div>
-</div>
-
-<br>
-
-<img src="https://i.imgur.com/wGuXI7O.jpg" width="70%" height="70%">
+<img src="https://i.imgur.com/frGD9v1.jpeg" width="100%" height="100%">
 <br><b>Connection Points</b>
-<br>
-<img src="https://i.imgur.com/v3cesIO.jpg"  width="50%" height="50%">
-<br><b>Fully Assembled</b>
+
 
 <br><br>
 <b>Dumping On-Board</b><br>
@@ -173,7 +375,7 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 <img src="https://i.imgur.com/s8X8hKA.png" width="45%" height="45%">
 
 <h3>Programming SCE Syscon:</h3>
-<img src="https://rimgo.pussthecat.org/N9KR6jI.png" width="55%" height="55%">
+<img src="https://i.imgur.com/9dgSPfr.png" width="55%" height="55%">
 <ol>
   <li>Connect from your Arduino to the Syscon Chip (<b>lift pin 15 and 16 (Pro) or pin 22 and 23 (Fat)if writing on board</b>).
   <li>Launch BwE_PS4_Syscon_Writer.exe it will auto detect your COM port or prompt you for one.
@@ -188,17 +390,6 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
   <br>
   You can only write with the supplied Arduino, TTL will not function nor will Renesas Software.<br>
   <b>All future writes do not require full or OCD commands (this will make it only write to 0x60000+)</b>, but I highly suggest adding confirm to validate the write.
-
-<div style="display: flex;">
-  <div style="width: 420px; padding: 10px;">
-    <img src="https://i.imgur.com/9gaPgrL.png" width="50%" height="50%">
-    <br><b>Writing Example</b>
-  </div>
-  <div style="width: 420px; padding: 10px;">
-    <img src="https://i.imgur.com/mNjgOVx.png" width="50%" height="50%">
-    <br><b>Verifying</b>
-  </div>
-</div>
 
 <h3>Reading & Writing NOR:</h3>
 
@@ -341,30 +532,30 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 <br>
 <div style="display: flex;">
   <div style="width: 320px; padding: 10px;">
-    <img src="https://www.psdevwiki.com/ps4/images/thumb/f/fa/MX25L1006E_Pinout.png/800px-MX25L1006E_Pinout.png" width="50%" height="50%">
+    <img src="https://www.psdevwiki.com/ps4/images/thumb/f/fa/MX25L1006E_Pinout.png/800px-MX25L1006E_Pinout.png" width="90%" height="90%">
     <br><b>8 Pin WSON8 - Pro & Slim</b>
   </div>
   <div style="width: 320px; padding: 10px;">
-    <img src="https://www.psdevwiki.com/ps4/images/thumb/c/cd/MX25L25635FMI-10G_Pinout.png/800px-MX25L25635FMI-10G_Pinout.png" width="50%" height="50%">
+    <img src="https://www.psdevwiki.com/ps4/images/thumb/c/cd/MX25L25635FMI-10G_Pinout.png/800px-MX25L25635FMI-10G_Pinout.png" width="90%" height="90%">
     <br><b>16 Pin SOP16 - Fat</b>
   </div>
 </div>
 <br>
 <div style="display: flex;">
   <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/cI0WcwT.jpeg" width="50%" height="50%">
+    <img src="https://i.imgur.com/cI0WcwT.jpeg" width="90%" height="90%">
     <br><b>Hardwiring Example</b>
   </div>
   <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/wPHOhBY.jpeg" width="50%" height="50%">
+    <img src="https://i.imgur.com/wPHOhBY.jpeg" width="90%" height="90%">
     <br><b>Non-Invasive Method</b>
   </div>
     <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/wtgghfk.jpeg" width="50%" height="50%">
+    <img src="https://i.imgur.com/wtgghfk.jpeg" width="90%" height="90%">
     <br><b>2.8v CH341A Mod</b>
   </div>
    <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/V06INO1.png" width="50%" height="50%">
+    <img src="https://i.imgur.com/V06INO1.png" width="90%" height="90%">
     <br><b>2.8v CH341A Mod</b>
   </div>
 </div>
@@ -390,28 +581,76 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 
 <h3>Final Step - LoadBios Repair / Downgrade:</h3>
 
-There are two methods, both are basically the same so pick whichever suits you!
+<b>There are <b>three</b> methods, pick whichever suits you! The third is the quickest, but not as tested as the others</b>
 <br><br>
-<li>Patch the UART patched NOR with the SB & CoreOS patch of your choice
+<b>Official Method:</b><br>
+<li>Patch the UART patched NOR with the CoreOS patch
 <li>Boot console and read UART log
-<li>If UART log says "CheckUpdVersion" AND OR the Bootloader version has changed...
-<li>Write the Syscon patch to the console
-<li>If not, try another patch and repeat the process
+<li>If UART log says "checkUpdVersion 0xffffffff != 0x(Lower Firmware)" <b>and</b> has a lower Secure Loader firmware...
+<li>You can then write the Syscon patch to the console
+<li>If not, try another patch and repeat the process (you must try ALL patches)
 <li>On success the console will boot to safe mode and prompt to install lower firmware (recovery).
-<br>
-<br>The other method:
 <br><br>
-<li>Patch the NOR with SB & CoreOS patch of your choice
+<b>Lazy Method (No UART Needed)</b><br>
+<li>Patch the NOR with CoreOS patch
 <li>Write the Syscon patch to the console
 <li>If the console does not boot...
-<li>Repeat first two steps, pick a new Patch for NOR and keep the same patch for Syscon.
+<li>Repeat first two steps, pick a new Patch for NOR (you must try ALL patches) and re-use the same patch for Syscon.
 <li>On success the console will boot to safe mode and prompt to install lower firmware (recovery).
-<br>
-<br>Troubleshooting:
 <br><br>
-<li>If you still have loadBios -8 and the Bootloader version has changed you have an issue with your RAM, replace and or repair it.
-<li>If you have BlStorageHeader error, you did not follow my instructions and have soft bricked your syscon, I will have to patch for you -- for $$$$ (or wait for update to my software).
+<b>New Method (Legitimate CoreOS Patch)</b><br>
+<li>Dump NOR & Syscon (keep, do not delete)
+<li>Update Console to <b>SAME</b> firmware (if 9.03, install 9.03 again etc) via safemode
+<li>Dump NOR again after update but rename and add '_updated_coreos' to the end of the file name (Example: nor1.bin is now nor1_updated_coreos.bin)
+<li>Run NOR Validator and select the <b>first</b> dump you made. In the CoreOS patcher (Option 5) you can now select Generate Legitimate Patch (Option 3)
+<li>Program will output your dump with the name '_patched_coreos' (Example: nor1.bin is now now1_patched_coreos.bin)
+<li>Upload the newly patched dump back to the PS4 along with a <b>patched</b> copy of the <b>original</b> Syscon
 <br>
+<br><b>Troubleshooting:</b>
+<br>
+<li>If you still have loadBios -8 and the Bootloader version has changed you have an issue with your RAM, replace and or repair it.
+<li>If you have errors about wrong version at the bottom of the UART log, you need to patch your Southbridge.
+<li>How can you see the previous firmware? Upload only the patched Syscon and read UART. Standby Version = Previous Firmware
+<li>Why so many CoreOS patches? Because CoreOS is encrypted, we cannot make a real patch, we are corrupting it in a way that allows it to think the value is real. Different consoles behave differently so there is now 14 patches. Luckily there is a new method (see above) which is signifigantly quicker, it uses the legitimate header value from an update (even if its the same firmware) and it patches that on your old dump.
+<li>The standby version and or the release version has changed, but the console still just says checkUpdVersion 0xfffff etc. This is because the Syscon patch has failed, you need to use the <a href="/sysconrebuilder"><b>Syscon Rebuilder</b></a> to rebuild the syscon and patch it with the -2 patch (Option 4), this will remove the error.
+<br>
+
+<style>
+.secure-loader {
+  background-color: #FFFFCC;
+}
+</style>
+<br><br>
+<b>How Does It Look From UART?</b>
+<br>
+<li><b>Patch 1</b><br><span class="secure-loader">secure loader build: May 10 2022 05:23:21 (r10568:release_branches/release_09.600) [711MHz]</span>
+<br>Boots Normally (Fail)
+<li><b>Patch 2</b><br><span class="secure-loader">secure loader build: May 10 2022 05:23:21 (r10568:release_branches/release_09.600) [711MHz]</span>
+<br>Boots Normally (Fail)
+<li><b>Patch 3</b><br><span class="secure-loader">secure loader build: May 10 2022 05:23:21 (r10568:release_branches/release_09.600) [711MHz]</span>
+<br>Boots Normally (Fail)
+<li><b>Patch 4</b><br><span class="secure-loader">secure loader build: May 10 2022 05:23:21 (r10568:release_branches/release_09.600) [711MHz]
+<br>ERROR: main(4122) loadBios -8</span>
+<br>BLOD (Fail)
+<li><b>Patch 5</b><br><span class="secure-loader">secure loader build: May 10 2022 05:23:21 (r10568:release_branches/release_09.600) [711MHz]</span>
+<br>Boots Normally (Fail)
+<li><b>Patch 6</b><br><span class="secure-loader">secure loader build: May 10 2022 05:23:21 (r10568:release_branches/release_09.600) [711MHz]</span>
+<br>Boots Normally (Fail)
+<li><b>Patch 7</b><br><span class="secure-loader">secure loader build: May 10 2022 05:23:21 (r10568:release_branches/release_09.600) [711MHz] 
+<br>ERROR: main(3738) checkUpdVersion 0xffffffff != 0x9600000</span>
+<br>Slot Switched To Current Slot (Fail)
+<li><b>Patch 8</b><br><span class="secure-loader">secure loader build: Sep  1 2021 05:19:44 (r10468:release_branches/release_09.000) [711MHz]
+<br>ERROR: main(3738) checkUpdVersion 0xffffffff != 0x9008000</span>
+<br><b>Secure Loader & CheckUpdVersion Lower = Success!! Patch Syscon Now!</b>
+<li><b>After Syscon Patch</b><br><span class="secure-loader">secure loader build: Sep  1 2021 05:19:44 (r10468:release_branches/release_09.000) [711MHz]
+<br>standby 09600000</span>
+<br><b>9.00 Secure Loader and 9.60 Standby. Slots successfully switched! Booting into 9.00!</b>
+
+<h3>Getting Support</h3>
+If you want support from BwE, you must provide a UART log for each NOR patch (without flashing Syscon) then another with only the patched Syscon.
+<br>That means a <b>total of 15 logs</b>, they must be labelled to represent each patch number and in .txt format. Zip it and email it/message it to me. 
+<br><b>If you do not do this, I will not provide support</b>
+
 <h3>Credits/Greetz:</h3>
 DarkNESMonk
 <br>Wildcard
