@@ -2,7 +2,7 @@
 
 
 <h2>Syscon Guide - SCE Syscon Method</h2>
-<b>Last Updated 27/3/23</b>
+<b>Last Updated 13/4/23</b>
 <br><br>
 <li><b>What is this?</b> This is a tool to read and write your PS4's Syscon on-board (and off-board) without the need to replace it with a blank (the now considered 'old way').
 <li><b>Why do I need this?</b> Modifying the Syscon allows for downgrading (via CoreOS swap), repairing of loadBios -8 type errors and enables service mode.
@@ -45,29 +45,32 @@
 </li>
 
 <h3>Purchase Links/Options</h3>
-								<div style="display: flex;">
-								  <div style="width: 320px; padding: 10px;">
-								  <a href="https://buy.stripe.com/dR68zw9mZb02436fZb">
-									<img src="https://i.imgur.com/AdzYMFP.jpeg" width="40%" height="30%">
-									</a>
-									<br><a href="https://buy.stripe.com/dR68zw9mZb02436fZb"><b>PCB Only (For Existing Customers)</b></a>
-									<br>$45AUD (28Euro, $30USD)
-								  </div>
-									<div style="width: 320px; padding: 10px;">
-									<a href="https://buy.stripe.com/cN2030dDfece8jm9AO">
-									<img src="https://i.imgur.com/0B0S571.jpeg" width="40%" height="30%">
-									</a>
-									<br><a href="https://buy.stripe.com/cN2030dDfece8jm9AO"><b>Syscon Writer Black Edition (Assembled On PCB)</b></a>
-									<br>$340AUD (210Euro, $225USD)
-								  </div>
-								   <div style="width: 320px; padding: 10px;">
-								   <a href="https://buy.stripe.com/dR66ro56J6JM436bIO">
-									<img src="https://i.imgur.com/KD0UbfD.jpeg" width="40%" height="30%">
-									</a>
-									<br><a href="https://buy.stripe.com/dR66ro56J6JM436bIO"><b>Syscon Writer Only</b></a>
-									<br>$300AUD (187Euro, $198USD)
-								  </div>
-								</div>
+<div style="display: flex;">
+	<div style="width: 320px; padding: 10px;">
+	<a href="https://buy.stripe.com/cN2030dDfece8jm9AO">
+	<img src="https://i.imgur.com/0B0S571.jpeg" width="40%" height="40%">
+	</a>
+	<br><a href="https://buy.stripe.com/28odTQeHjecefLOeVb"><b>Syscon Writer Black Edition</b></a>
+	<br>$340AUD (210Euro, $225USD)
+  </div>
+   <div style="width: 320px; padding: 10px;">
+   <a href="#hardware">
+	<img src="https://i.imgur.com/FIh2eA8.png" width="40%" height="40%">
+	</a>
+	<br><a href="https://buy.stripe.com/00gdTQar39VY9nq14o"><b>Syscon Writer Purple Edition</b></a>
+	<br>Pre-Order Only!
+  </div>
+   <div style="width: 320px; padding: 10px;">
+   <a href="https://buy.stripe.com/dR66ro56J6JM436bIO">
+	<img src="https://i.imgur.com/28fALmn.jpeg" width="40%" height="40%">
+	</a>
+	<br><b>Syscon Writer Only</b>
+	<br>Discontinued!
+  </div>
+</div>
+<br>
+<b>Comes with HWID Locked Syscon Writer Software & Syscon Reader Software.</b>
+<br>
 
 
 <h3>Compatibilitiy</h3>
