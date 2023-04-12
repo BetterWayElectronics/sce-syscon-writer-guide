@@ -48,21 +48,21 @@
 								<div style="display: flex;">
 								  <div style="width: 320px; padding: 10px;">
 								  <a href="https://buy.stripe.com/dR68zw9mZb02436fZb">
-									<img src="https://i.imgur.com/AdzYMFP.jpeg" width="90%" height="70%">
+									<img src="https://i.imgur.com/AdzYMFP.jpeg" width="40%" height="30%">
 									</a>
 									<br><a href="https://buy.stripe.com/dR68zw9mZb02436fZb"><b>PCB Only (For Existing Customers)</b></a>
 									<br>$45AUD (28Euro, $30USD)
 								  </div>
 									<div style="width: 320px; padding: 10px;">
 									<a href="https://buy.stripe.com/cN2030dDfece8jm9AO">
-									<img src="https://i.imgur.com/0B0S571.jpeg" width="90%" height="70%">
+									<img src="https://i.imgur.com/0B0S571.jpeg" width="40%" height="30%">
 									</a>
 									<br><a href="https://buy.stripe.com/cN2030dDfece8jm9AO"><b>Syscon Writer Black Edition (Assembled On PCB)</b></a>
 									<br>$340AUD (210Euro, $225USD)
 								  </div>
 								   <div style="width: 320px; padding: 10px;">
 								   <a href="https://buy.stripe.com/dR66ro56J6JM436bIO">
-									<img src="https://i.imgur.com/KD0UbfD.jpeg" width="90%" height="70%">
+									<img src="https://i.imgur.com/KD0UbfD.jpeg" width="40%" height="30%">
 									</a>
 									<br><a href="https://buy.stripe.com/dR66ro56J6JM436bIO"><b>Syscon Writer Only</b></a>
 									<br>$300AUD (187Euro, $198USD)
@@ -79,11 +79,11 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 
 <div style="display: flex;">
   <div style="width: 420px; padding: 10px;">
-    <img src="https://i.imgur.com/UnGh1ne.png" width="100%" height="100%">
+    <img src="https://i.imgur.com/UnGh1ne.png" width="40%" height="40%">
     <br><b>FAT Syscon</b>
   </div>
   <div style="width: 420px; padding: 10px;">
-      <img src="https://i.imgur.com/mzsNJHP.png" width="100%" height="100%">
+      <img src="https://i.imgur.com/mzsNJHP.png" width="40%" height="40%">
     <br><b>Slim/Pro Syscon</b>
   </div>
 </div>
@@ -326,30 +326,30 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 <br>
 <div style="display: flex;">
   <div style="width: 320px; padding: 10px;">
-    <img src="https://www.psdevwiki.com/ps4/images/thumb/f/fa/MX25L1006E_Pinout.png/800px-MX25L1006E_Pinout.png" width="90%" height="90%">
+    <img src="https://www.psdevwiki.com/ps4/images/thumb/f/fa/MX25L1006E_Pinout.png/800px-MX25L1006E_Pinout.png" width="40%" height="40%">
     <br><b>8 Pin WSON8 - Pro & Slim</b>
   </div>
   <div style="width: 320px; padding: 10px;">
-    <img src="https://www.psdevwiki.com/ps4/images/thumb/c/cd/MX25L25635FMI-10G_Pinout.png/800px-MX25L25635FMI-10G_Pinout.png" width="90%" height="90%">
+    <img src="https://www.psdevwiki.com/ps4/images/thumb/c/cd/MX25L25635FMI-10G_Pinout.png/800px-MX25L25635FMI-10G_Pinout.png" width="40%" height="40%">
     <br><b>16 Pin SOP16 - Fat</b>
   </div>
 </div>
 <br>
 <div style="display: flex;">
   <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/cI0WcwT.jpeg" width="90%" height="90%">
+    <img src="https://i.imgur.com/cI0WcwT.jpeg" width="40%" height="40%">
     <br><b>Hardwiring Example</b>
   </div>
   <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/wPHOhBY.jpeg" width="90%" height="90%">
+    <img src="https://i.imgur.com/wPHOhBY.jpeg" width="40%" height="40%">
     <br><b>Non-Invasive Method</b>
   </div>
     <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/wtgghfk.jpeg" width="90%" height="90%">
+    <img src="https://i.imgur.com/wtgghfk.jpeg" width="40%" height="40%">
     <br><b>2.8v CH341A Mod</b>
   </div>
    <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/V06INO1.png" width="90%" height="90%">
+    <img src="https://i.imgur.com/V06INO1.png" width="40%" height="40%">
     <br><b>2.8v CH341A Mod</b>
   </div>
 </div>
