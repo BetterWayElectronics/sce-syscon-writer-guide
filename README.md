@@ -1,7 +1,7 @@
 
 
 <h2>Syscon Guide - SCE Syscon Method</h2>
-<b>Last Updated 2/2/23</b>
+<b>Last Updated 2/2/23 - VISIT WEBSITE FOR LATEST</b>
 <br><br>
 <li><b>What is this?</b> This is a tool to read and write your PS4's Syscon on-board (and off-board) without the need to replace it with a blank (the now considered 'old way').
 <li><b>Why do I need this?</b> Modifying the Syscon allows for downgrading (via CoreOS swap), repairing of loadBios -8 type errors and enables service mode.
@@ -413,7 +413,10 @@ There are two methods, both are basically the same so pick whichever suits you!
 <li>If you have BlStorageHeader error, you did not follow my instructions and have soft bricked your syscon, I will have to patch for you -- for $$$$ (or wait for update to my software).
 <br>
 <h3>Credits/Greetz:</h3>
-DARKNESMONK
+DarkNESMonk
+<br>Wildcard
+<br>fail0verflow
+<br>JEFF
   <br>PDJ
   <br>Hoea
   <br>Donators & Suppliers of Dumps/Syscons
