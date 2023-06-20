@@ -1,8 +1,6 @@
 
-
-
 <h2>Syscon Guide - SCE Syscon Method</h2>
-<b>Last Updated 13/4/23</b>
+<b>Last Updated 16/6/23</b>
 <br><br>
 <li><b>What is this?</b> This is a tool to read and write your PS4's Syscon on-board (and off-board) without the need to replace it with a blank (the now considered 'old way').
 <li><b>Why do I need this?</b> Modifying the Syscon allows for downgrading (via CoreOS swap), repairing of loadBios -8 type errors and enables service mode.
@@ -10,21 +8,51 @@
 <li><b>Is there a cheaper way?</b> Yes, here is the <a href="https://betterwayelectronics.com.au/syscon.html">free/cheap method</a> - it requires replacing Sony's Syscon with blank RL78 chips.
 <li><b>Is this difficult to install?</b> You have to solder 1 lifted wire to the Syscon whilst on-board and 3 others to alternative points. Once glitched you drop that pin and keep rest of the alternative points on the board.
 <li><b>Any discounts?</b> If you buy in bulk, yes.
-<li><b>Video Guide?</b> <a href="https://www.youtube.com/watch?v=hcmMSYmwSUQ">On my YouTube</a>
+<li><b>Do you need a backup of the previous version syscon?</b> No you don't need a backup of anything to do this downgrade process, you are switching slots!
+
+<li><b>Can I go from 10.50 to 9.00?</b> Only if 9.00 was your PREVIOUS firmware.
+<li><b>Can I go from 10.01 to 9.00?</b> Only if 9.00 was your PREVIOUS firmware.
+<li><b>Can I go from 9.50 to 9.00?</b> Only if 9.00 was your PREVIOUS firmware.
+<li><b>Can I go from 9.00 to 5.50?</b> Only if 5.50 was your PREVIOUS firmware.
+<li><b>Which firmware will I go back to?</b> Whichever was your PREVIOUS firmware.
+
 </li>
 
+<style>
+    .thumbnail-container {
+        position: relative;
+    }
+    .thumbnail-text {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-60%, -60%);
+        color: white;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+</style>
+
+<h3>Video Guides</h3>
+<a href="https://www.youtube.com/watch?v=hcmMSYmwSUQ/" class="thumbnail-container">
+    <img src="https://i.ytimg.com/vi/hcmMSYmwSUQ/hqdefault.jpg" alt="Video thumbnail" width="320" height="180">
+    <div class="thumbnail-text">English</div>
+</a>
+<a href="https://www.youtube.com/watch?v=q1F0AL3ttjY/" class="thumbnail-container">
+    <img src="https://i.ytimg.com/vi/q1F0AL3ttjY/hqdefault.jpg" alt="Video thumbnail" width="320" height="180">
+    <div class="thumbnail-text">Portuguese</div>
+</a>
+<a href="https://www.youtube.com/watch?v=W7RpkG5hiA0/" class="thumbnail-container">
+    <img src="https://i.ytimg.com/vi/W7RpkG5hiA0/hqdefault.jpg" alt="Video thumbnail" width="320" height="180">
+    <div class="thumbnail-text">Hindi/Urdo</div>
+</a>
+
+
+
 <h3>Shopping List</h3>
-<b>Required If Assembling Yourself:</b>
-	<li><a href="https://betterwayelectronics.com.au/bweps4sysconwriter"><b>BwE PS4 Syscon Writer ($300AUD)</b></a>
-		<li><a href="https://www.aliexpress.com/item/32273550144.html?mp=1">FT232RL TTL Serial Module (For UART) ($2AUD)</a>
-	<li><a href="https://www.aliexpress.com/item/32841564699.html">4N35 Optocoupler ($1.35AUD)</a>
-	<li><a href="https://www.aliexpress.com/item/32214404363.html">Colourful Mini Breadboard ($1AUD)</a>
-	<li><a href="https://www.aliexpress.com/item/4000203371860.html">Male->Female Dupont Cables ($2AUD)</a>
-	<li><a href="https://www.aliexpress.com/item/32247209964.html">47 ohm Resistor ($1AUD)</a>
-	<li><a href="https://www.aliexpress.com/item/32247209964.html">4.7-5k ohm Resistor ($1AUD)</a>
-	<li><a href="https://www.aliexpress.com/item/32660088529.html">1N4148/1N4448 Diode ($1AUD)</a>
-	<li><a href="https://betterwayelectronics.com.au/downloads/BwE_PS4_Syscon_Software.rar">BwE PS4 Syscon Software (Reader & Writer) (Updated 7/1/23)</a>
-	<li><a href="https://betterwayelectronics.com.au/downloads/BwE_PS4_NOR_Validator.rar">BwE PS4 NOR Validator </a>
+	<li><a href="https://betterwayelectronics.com.au/bweps4sysconwriter"><b>BwE PS4 Syscon Writer</b></a>
+	<li><a href="https://betterwayelectronics.com.au/downloads/BwE_PS4_Syscon_Software.rar">BwE PS4 Syscon Software (Reader & Writer) (Free w/ Writer)</a>
+	<li><a href="https://betterwayelectronics.com.au/downloads/BwE_PS4_NOR_Validator.rar">BwE PS4 NOR Validator</a>
 </li>
 <br>
 <b>Optional:</b>
@@ -44,33 +72,56 @@
   <li><a href="https://www.aliexpress.com/item/4000315816666.html">32-34AWG Cable 10m ($4.50AUD)</a></li>
 </li>
 
-<h3>Purchase Links/Options</h3>
-<div style="display: flex;">
-	<div style="width: 320px; padding: 10px;">
-	<a href="https://buy.stripe.com/cN2030dDfece8jm9AO">
-	<img src="https://i.imgur.com/0B0S571.jpeg" width="40%" height="40%">
-	</a>
-	<br><a href="https://buy.stripe.com/28odTQeHjecefLOeVb"><b>Syscon Writer Black Edition</b></a>
-	<br>$340AUD (210Euro, $225USD)
-  </div>
-   <div style="width: 320px; padding: 10px;">
-   <a href="#hardware">
-	<img src="https://i.imgur.com/FIh2eA8.png" width="40%" height="40%">
-	</a>
-	<br><a href="https://buy.stripe.com/00gdTQar39VY9nq14o"><b>Syscon Writer Purple Edition</b></a>
-	<br>Pre-Order Only!
-  </div>
-   <div style="width: 320px; padding: 10px;">
-   <a href="https://buy.stripe.com/dR66ro56J6JM436bIO">
-	<img src="https://i.imgur.com/28fALmn.jpeg" width="40%" height="40%">
-	</a>
-	<br><b>Syscon Writer Only</b>
-	<br>Discontinued!
-  </div>
-</div>
-<br>
-<b>Comes with HWID Locked Syscon Writer Software & Syscon Reader Software.</b>
-<br>
+								<h3>Purchase Links:</h3>
+									<div style="font-size: 18px; display: flex; flex-wrap: wrap;">
+										<div style="width: 340px; padding: 10px;">
+											<a href="https://buy.stripe.com/cN2030dDfece8jm9AO">
+												<img src="https://i.imgur.com/ZjZmLLC.jpeg" width="90%" height="70%">
+											</a>
+											<br>
+											<a href="https://buy.stripe.com/28o9DAdDfgkm8jmdRn"><b>Syscon Writer Blue Edition <span style="color:green">(New!)</span></b></a>
+											<br>Voltage Switch, UART Mode, Faster Processor, Fully Integrated Design. Warranty!
+											<br><b>$385AUD (233Euro, $252USD)</b>
+										</div>
+										
+										<div style="width: 320px; padding: 10px;">
+											<a href="https://buy.stripe.com/cN2030dDfece8jm9AO">
+												<img src="https://i.imgur.com/HpX4doh.jpeg" width="90%" height="70%">
+											</a>
+											<br>
+											<a href="#hardware"><b>Syscon Writer Black Edition <span style="color:red">(SOLD OUT & DISCONTINUED!)</span>)</b></a>
+											<br>Presoldered Daughterboard - Easier Connections 
+											<br><b><s>$340AUD (210Euro, $225USD)</s></b>
+										</div>
+									</div><br><br>
+									<h3>Discount Models (Limited Stock):</h3>
+									<div style="font-size: 16px; display: flex; flex-wrap: wrap;">
+										<div style="width: 340px; padding: 10px;">
+											<a href="https://buy.stripe.com/eVa8zwbv7c46czC6oR">
+												<img src="https://i.imgur.com/CN0lt06.jpeg" width="80%" height="60%">
+											</a>
+											<br>
+											<a href="https://buy.stripe.com/eVa8zwbv7c46czC6oR"><b>Prototype Syscon Writer Purple Edition <span style="color:yellow">(Refurbished)</span></b></a>
+											<br>Voltage Switch, Faster Processor, Fully Integrated Design. Fully Functional! No Warranty!
+											<br><b>$300AUD (180Euro, $198USD)</b>
+
+										  </div>
+										  
+										<div style="width: 320px; padding: 10px;">
+											<a href="https://buy.stripe.com/4gw7vsar3fgi0QU8wU">
+												<img src="https://i.imgur.com/xWVXO0C.jpeg" width="80%" height="60%">
+											</a>
+											<br>
+											<a href="https://buy.stripe.com/4gw7vsar3fgi0QU8wU"><b>Prototype Error Edition <span style="color:red">(Non-Functional, Requires Repair)</span></b></a>
+											<br>Voltage Switch, Faster Processor, Fully Integrated Design. Includes Repair Instructions! No Warranty!
+											<br><b>$250AUD (150Euro, $165USD)</b>
+										</div>
+										
+									</div>
+				
+								<b>Note: All Syscon Writers Come With HWID Locked <a href="#software">Syscon Writer & Reader Software</a> For Free!</b><br>(Available with USB License for Multi-PC Use)
+								<br>
+
 
 
 <h3>Compatibilitiy</h3>
@@ -82,11 +133,11 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 
 <div style="display: flex;">
   <div style="width: 420px; padding: 10px;">
-    <img src="https://i.imgur.com/UnGh1ne.png" width="40%" height="40%">
+    <img src="https://i.imgur.com/UnGh1ne.png" width="100%" height="100%">
     <br><b>FAT Syscon</b>
   </div>
   <div style="width: 420px; padding: 10px;">
-      <img src="https://i.imgur.com/mzsNJHP.png" width="40%" height="40%">
+      <img src="https://i.imgur.com/mzsNJHP.png" width="100%" height="100%">
     <br><b>Slim/Pro Syscon</b>
   </div>
 </div>
@@ -329,30 +380,30 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 <br>
 <div style="display: flex;">
   <div style="width: 320px; padding: 10px;">
-    <img src="https://www.psdevwiki.com/ps4/images/thumb/f/fa/MX25L1006E_Pinout.png/800px-MX25L1006E_Pinout.png" width="40%" height="40%">
+    <img src="https://www.psdevwiki.com/ps4/images/thumb/f/fa/MX25L1006E_Pinout.png/800px-MX25L1006E_Pinout.png" width="90%" height="90%">
     <br><b>8 Pin WSON8 - Pro & Slim</b>
   </div>
   <div style="width: 320px; padding: 10px;">
-    <img src="https://www.psdevwiki.com/ps4/images/thumb/c/cd/MX25L25635FMI-10G_Pinout.png/800px-MX25L25635FMI-10G_Pinout.png" width="40%" height="40%">
+    <img src="https://www.psdevwiki.com/ps4/images/thumb/c/cd/MX25L25635FMI-10G_Pinout.png/800px-MX25L25635FMI-10G_Pinout.png" width="90%" height="90%">
     <br><b>16 Pin SOP16 - Fat</b>
   </div>
 </div>
 <br>
 <div style="display: flex;">
   <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/cI0WcwT.jpeg" width="40%" height="40%">
+    <img src="https://i.imgur.com/cI0WcwT.jpeg" width="90%" height="90%">
     <br><b>Hardwiring Example</b>
   </div>
   <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/wPHOhBY.jpeg" width="40%" height="40%">
+    <img src="https://i.imgur.com/wPHOhBY.jpeg" width="90%" height="90%">
     <br><b>Non-Invasive Method</b>
   </div>
     <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/wtgghfk.jpeg" width="40%" height="40%">
+    <img src="https://i.imgur.com/wtgghfk.jpeg" width="90%" height="90%">
     <br><b>2.8v CH341A Mod</b>
   </div>
    <div style="width: 320px; padding: 10px;">
-    <img src="https://i.imgur.com/V06INO1.png" width="40%" height="40%">
+    <img src="https://i.imgur.com/V06INO1.png" width="90%" height="90%">
     <br><b>2.8v CH341A Mod</b>
   </div>
 </div>
