@@ -18,20 +18,6 @@
 
 </li>
 
-<style>
-    .thumbnail-container {
-        position: relative;
-    }
-    .thumbnail-text {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-60%, -60%);
-        color: white;
-        text-align: center;
-        font-size: 0.8rem;
-    }
-</style>
 
 <h3>Video Guides</h3>
 <a href="https://www.youtube.com/watch?v=hcmMSYmwSUQ/" class="thumbnail-container">
