@@ -156,9 +156,8 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
   <br>If the dumps do not match change resistors (100ohm, 510ohm, 1kohm).
   <br>If it does not even dump check your connections (seriously) or change your Optocoupler.
 
-
 <h3>Patching Syscon Dump:</h3>
-<img src="https://i.imgur.com/rSFmV3Y.png" width="85%" height="85%">
+<img src="https://i.imgur.com/TqBuRXV.png" width="45%" height="45%">
 
 <ol>
   <li>Run BwE PS4 NOR Validator
@@ -168,6 +167,7 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
   <li>If it says "Unable to Auto-Patch" it will prompt you to Manually Patch - If so you must select an earlier 080B (Use Verbose Mode) to overwrite the last 080B.
   <li>If it says "Syscon NOT Patchable" then call it quits, game over. Your PS4 has either had its initialisation overwritten or some other historical event is blocking the patch.
   <li>Any other errors you can likely fix by <a href="https://betterwayelectronics.com.au/#sysconrebuilder">rebuilding</a> the Syscon</li>
+
   <li>Apply the patch!
   <li>It will show you what you are overwriting (and potentially the data you are overwriting it with).
   <li>File will be saved as "???_080B_patched.bin" - Keep this and the original, label it appropriately and store it!
@@ -362,22 +362,21 @@ Do you have the Syscon on the right? You're outta luck. The glitch only works on
 
 
 <h3>Patching NOR Dump:</h3>
-
+<img src="https://i.imgur.com/2cJJk4C.png" width="55%" height="55%">
 <ol>
   <li>Run BwE PS4 NOR Validator</li>
-  <li>Select Option 1 "Validate or Patch PS4 NOR"1</li>
+  <li>Select Option 1 "Validate or Patch PS4 NOR"</li>
   <li>Select your NOR file</li>
-  <li>Select Option 9 "Validate" and patch for UART when prompted</li>
-  <li>If your NOR is valid go back and select Option 5 "Patch CoreOS & Southbridge (LoadBios & Downgrading)"</li>
-  <li>Read the warnings!</li>
-  <li>Select Option 1 "Patch SB Flag, CoreOS Header & UART"</li>
-  <li>Select CoreOS Header Patch (Or choose Auto) - There are multiple choices as each console may behave differently with each patch, just go with the first.
-  <li>NOR will be saved as "?_sb-coreos-uart-patched_*_**.bin"</li>
-  <li><b>Do NOT boot the console with patched NOR until you have ALSO backed up and or patched the Syscon.</b>
+  <li>Select Option 10 or 11 "Validate" and patch for UART when prompted</li>
+  <li>If your NOR is <b>valid</b> go back and select Option 5 "Patch CoreOS & Southbridge (LoadBios Repair & Downgrading)"</li>
+  <li><b>Read the warnings!</b></li>
+  <li>Select Option 1 "Auto Generate CoreOS Header & UART Patches"</li>
+  <li>NOR will be saved as "?_coreos-uart-patched_*.bin" 14 times!</li>
+  <li>Apply each patch in sequence (without patching Syscon) and read the UART logs (See Final Step).
+  <li>When the correct patch has been found, then you can patch the syscon! Downgrade will be complete (See Final Step).
 
 </ol>
 
-<img src="https://i.imgur.com/d7ANNtH.png" width="65%" height="65%">
 
 <h3>Final Step - LoadBios Repair / Downgrade:</h3>
 
