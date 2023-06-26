@@ -1,11 +1,11 @@
 
 <h2>Syscon Guide - SCE Syscon Method</h2>
-<b>Last Updated 22/6/23</b>
+<b>Last Updated 26/6/23</b>
 <br><br>
 <li><b>What is this?</b> This is a tool to read and write your PS4's Syscon on-board (and off-board) without the need to replace it with a blank (the now considered 'old way').
 <li><b>Why do I need this?</b> Modifying the Syscon allows for downgrading (via CoreOS swap), repairing of loadBios -8 type errors and enables service mode.
 <li><b>Why isn't this free?</b> This uses a proprietary and unreleased exploit on the R78 chip. It must be pre-flashed and locked on a fresh Arduino. The target market are repariers, hence the price.
-<li><b>Is there a cheaper way?</b> Yes, it requires replacing Sony's Syscon with blank RL78 chips.
+<li><b>Is there a cheaper way?</b> Yes, it requires replacing Sony's Syscon with blank RL78 chips. If its cheap/free you get what you pay for!
 <li><b>Is this difficult to install?</b> You have to solder 1 lifted wire to the Syscon whilst on-board and 3 others to alternative points. Once glitched you drop that pin and keep rest of the alternative points on the board.
 <li><b>Any discounts?</b> If you buy in bulk, yes.
 <li><b>Do you need a backup of the previous version syscon?</b> No you don't need a backup of anything to do this downgrade process, you are switching slots!
