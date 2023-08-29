@@ -61,14 +61,18 @@
 <h3>Purchase Links:</h3>
 	<div style="font-size: 18px; display: flex; flex-wrap: wrap;">
 		<div style="width: 340px; padding: 10px;">
-			<a href="https://buy.stripe.com/cN2030dDfece8jm9AO">
-				<img src="https://i.imgur.com/ZjZmLLC.jpeg" width="30%" height="30%">
-			</a>
-			<br>
-			<a href="https://buy.stripe.com/28o9DAdDfgkm8jmdRn"><b>Syscon Writer Blue Edition <span style="color:green">(New!)</span></b></a>
-			<br>Voltage Switch, UART Mode, Faster Processor, Fully Integrated Design. Warranty!
-			<br><b>$385AUD (233Euro, $252USD)</b>
-		</div>
+
+
+<a href="https://buy.stripe.com/cN29DA6aN2tweHK8xj">
+	<img src="https://i.imgur.com/kVXxlqH.jpeg" width="40%" height="40%">
+</a>
+<br>
+<a href="https://buy.stripe.com/cN29DA6aN2tweHK8xj"><b>Syscon Writer Black Edition<span style="color:green"> (New Release!)</span></b></a>
+<br>Voltage Switch, UART Mode, Faster Processor, Fully Integrated Design. Warranty!
+<br><s>$385AUD (233Euro, $252USD)</s>
+<br><b>$300AUD (177Euro, $192USD, 1406RMB)</b>
+
+</div>
 		
 
 <br><b>Note: All Syscon Writers Come With HWID Locked <a href="#software">Syscon Writer & Reader Software</a> For Free!</b><br>(Available with USB License for Multi-PC Use)
